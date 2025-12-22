@@ -1,4 +1,7 @@
 # boxtrans
+<p align="center">
+  <img src="Animation.gif" alt="BoxTrans Animation" width="600">
+</p>
 English: A powerful, AI-driven real-time screen translation and OCR tool. Seamlessly capture, translate, and listen to any text on your screen.
 
 Turkish: Yapay zeka destekli, gerçek zamanlı ekran çeviri ve OCR aracı. Ekrandaki her türlü metni yakalayın, çevirin ve sesli dinleyin.
