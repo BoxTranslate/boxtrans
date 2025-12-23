@@ -1,4 +1,11 @@
-# boxtrans
+# 🏆 BoxTrans
+<p align="center">
+  <a href="https://github.com/BoxTranslate/boxtrans">
+    <img src="https://img.shields.io/github/stars/BoxTranslate/boxtrans?style=social" alt="GitHub stars">
+  </a>
+  <br>
+  <b>If you like BoxTrans, please give us a ⭐ on GitHub to support the project!</b>
+</p>
 <p align="center">
   <img src="Animation.gif" alt="BoxTrans Animation" width="600">
 </p>
