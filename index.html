@@ -3,83 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoxTrans - AI Screen Translator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>BoxTrans - Ultimate AI Screen Translator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary: #ff4757;
-            --dark: #2f3542;
-            --light: #f1f2f6;
-        }
-        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--dark); line-height: 1.6; }
+        :root { --primary: #ff4757; --dark: #1e272e; --light: #f1f2f6; --accent: #2ed573; }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--dark); overflow-x: hidden; }
         
-        /* Hero Section */
         header { 
-            padding: 80px 20px; 
-            background: white; 
-            text-align: center;
-            border-bottom: 1px solid #ddd;
+            padding: 120px 20px 180px 20px; 
+            background: linear-gradient(135deg, #2f3542 0%, #1e272e 100%);
+            color: white; text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            position: relative;
+            z-index: 1;
         }
-        h1 { font-size: 4em; margin: 0; letter-spacing: -2px; }
-        .hero-desc { font-size: 1.2em; color: #57606f; max-width: 600px; margin: 20px auto; }
-        
-        /* CTA Button */
+
+        header h1, header p, header .btn { position: relative; z-index: 5; }
+
         .btn { 
-            display: inline-block; padding: 18px 45px; 
+            display: inline-block; padding: 18px 40px; 
             background: var(--primary); color: white; 
-            text-decoration: none; border-radius: 12px; 
-            font-weight: 800; font-size: 1.1em; 
-            box-shadow: 0 10px 20px rgba(255, 71, 87, 0.3);
-            transition: 0.3s; 
+            text-decoration: none; border-radius: 50px; 
+            font-weight: 800; transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(255, 71, 87, 0.4);
         }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(255, 71, 87, 0.4); }
+        .btn:hover { transform: scale(1.05); background: #ff6b81; }
 
-        /* Content Sections */
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; }
-        
-        .gif-container img { width: 100%; border-radius: 15px; border: 5px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        
-        /* Features Grid */
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-        .feature-item { text-align: left; padding: 20px; border-left: 4px solid var(--primary); background: #fafafa; border-radius: 0 10px 10px 0; }
-        .feature-item i { color: var(--primary); margin-bottom: 10px; font-size: 1.5em; }
+        .container { 
+            max-width: 1000px; 
+            margin: -100px auto 50px; /* Siyah alana daha iyi biniş sağladık */
+            padding: 0 20px; 
+            position: relative;
+            z-index: 10; 
+        }
 
-        /* Footer / Donation */
-        footer { text-align: center; padding: 60px 20px; background: var(--dark); color: white; }
-        .coffee-btn img { height: 50px; border-radius: 8px; transition: 0.3s; }
-        .coffee-btn:hover img { transform: scale(1.05); }
+        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
+        .tab-btn { 
+            padding: 12px 25px; border: none; background: white; 
+            border-radius: 30px; cursor: pointer; font-weight: 600;
+            transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .tab-btn.active { background: var(--primary); color: white; }
 
-        h2 { border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+        .tab-content { display: none; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s ease; }
+
+        .gif-display { width: 100%; max-height: 520px; object-fit: contain; border-radius: 12px; margin-top: 20px; background: #fafafa; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 50px; }
+        .card { background: white; padding: 30px; border-radius: 20px; border-bottom: 4px solid var(--primary); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        footer { background: #1e272e; color: white; padding: 50px 20px; text-align: center; margin-top: 100px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>📦 BoxTrans</h1>
-    <p class="hero-desc">The ultimate open-source tool for real-time screen translation. Capture, translate, and listen with AI power.</p>
-    <a href="https://github.com/BoxTranslate/boxtrans/releases/latest" class="btn">
-        <i class="fa-brands fa-windows"></i> Download Latest v1.0.0
+    <h1 style="font-size: 4em; margin: 0;">🏆 BoxTrans</h1>
+    <p style="font-size: 1.2em; opacity: 0.8; margin: 20px 0 40px;">Professional AI-Powered Real-Time Screen Translation</p>
+    <a href="https://github.com/BoxTranslate/boxtrans/releases/" class="btn">
+        <i class="fa-brands fa-windows"></i> Download Free Now
     </a>
 </header>
 
 <div class="container">
-    <div class="card gif-container">
-        <h2>✨ See it in Action</h2>
-        <img src="Animation.gif" alt="BoxTrans Demo">
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'tab1')">⚡ Fast Translate</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab2')">🌎 Japanese Translation</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab3')">🔊 AI Voice (TTS)</button>
     </div>
 
-    <div class="card">
-        <h2>🚀 Key Features</h2>
-        <div class="features">
-            <div class="feature-item">
-                <i class="fa-solid fa-bolt"></i>
-                <strong>High-Speed OCR</strong>
-                <p>Powered by PaddleOCR for instant text recognition.</p>
-            </div>
-            <div class="feature-item">
-                <i class="fa-solid fa-globe"></i>
-                <strong>80+ Languages</strong>
-                <p>Supports Japanese, Chinese, Turkish, and many more.</p>
-            </div>
+    <div id="tab1" class="tab-content active">
+        <h3>Lightning Fast Recognition</h3>
+        <p>Powered by PaddleOCR for maximum accuracy on any font.</p>
+        <img src="Animation.gif" class="gif-display" alt="OCR Demo"> 
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <h3><span style="background: #ffeaa7; color: #d63031; padding: 2px 8px; border-radius: 5px; font-size: 0.7em; vertical-align: middle;">COMING SOON</span> Japanese & East Asian Support</h3>
+        <p>We are currently integrating specialized JP/KR/CN models for 100% accuracy in visual novels. Stay tuned for v1.1.0!</p>
+        <img src="Animation2.gif" class="gif-display" alt="Future Language Support"> 
+    </div>
+
+    <div id="tab3" class="tab-content">
+    <h3>80+ Languages & AI Voice</h3>
+    <p>High-quality Text-to-Speech helps you learn as you play. Listen to AI-powered voice translations in over 80 languages.</p>
+    <img src="Animation3.gif" class="gif-display" alt="TTS Demo">  
+    </div>
+
+<div class="grid">
+        <div class="card">
+            <i class="fa-solid fa-language" style="font-size: 2.5em; color: var(--primary); margin-bottom: 15px;"></i>
+            <h3>80+ Languages Support</h3>
+            <p>From English to Turkish, Spanish to German. Translate almost any language instantly with global OCR support.</p>
+        </div>
+        
+        <div class="card">
+            <i class="fa-solid fa-display" style="font-size: 2.5em; color: var(--primary); margin-bottom: 15px;"></i>
+            <h3>Best Gaming Experience</h3>
+            <p>For best results, please run your games in <b>Windowed mode</b> or <b>Borderless Windowed mode</b>.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Support the BoxTrans Project</p>
+    <a href="https://buymeacoffee.com/boxtrans" style="text-decoration: none;">
+        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" style="height: 50px;">
+    </a>
+    <div style="margin-top: 30px; opacity: 0.5;">
+        <i class="fa-brands fa-github"></i> Open Source on GitHub
+    </div>
+</footer>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
+        tablinks = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</body>
+</html>
