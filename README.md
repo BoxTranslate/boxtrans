@@ -10,6 +10,9 @@ Turkish: Yapay zeka destekli, gerçek zamanlı ekran çeviri ve OCR aracı. Ekra
 BoxTrans is a modern desktop utility designed to capture, recognize (OCR), and translate any text on your screen in real-time. 
 By leveraging the power of PaddleOCR and the world-class DeepL API, BoxTrans provides near-perfect translations for games, technical documents, videos, and more.
 **********************************************************************************************************************************************
+<p align="center">
+  <img src="Animation3.gif" alt="BoxTrans Animation" width="600">
+</p>
 * High-Speed OCR: Powered by PaddleOCR for millisecond-level text recognition from any selected screen area.
 
 * DeepL Integration: Context-aware, natural translations using the DeepL translation engine.
@@ -23,6 +26,9 @@ By leveraging the power of PaddleOCR and the world-class DeepL API, BoxTrans pro
 * Theme Support: Modern UI with customizable themes and transparency settings.
 
 * Instant Swap: Quickly swap between source and target languages with a single click.
+<p align="center">
+  <img src="Animation2.gif" alt="BoxTrans Animation" width="600">
+</p>
 **********************************************************************************************************************************************
 ⚠️ Requirements & Troubleshooting
 Administrator Rights: Required for global keyboard hooks and screen interaction.
