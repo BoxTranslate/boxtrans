@@ -10,9 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #ff4757; --dark: #1e272e; --light: #f1f2f6; --accent: #2ed573; --github: #24292e; }
+        :root { --primary: #ff4757; --dark: #1e272e; --light: #f1f2f6; --accent: #2ed573; --github: #24292e; --warning: #ff9f43; }
         body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--dark); overflow-x: hidden; scroll-behavior: smooth; }
-        header { padding: 120px 20px 180px 20px; background: linear-gradient(135deg, #2f3542 0%, #1e272e 100%); color: white; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); position: relative; z-index: 1; }
+        
+        /* Top Warning Bar */
+        .notice-bar { background: var(--warning); color: #000; padding: 10px 20px; text-align: center; font-size: 0.9em; font-weight: 700; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        
+        header { padding: 80px 20px 180px 20px; background: linear-gradient(135deg, #2f3542 0%, #1e272e 100%); color: white; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); position: relative; z-index: 1; }
         header h1, header p, header .btn-group { position: relative; z-index: 5; }
         .btn { display: inline-block; padding: 18px 40px; background: var(--primary); color: white; text-decoration: none; border-radius: 50px; font-weight: 800; transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 71, 87, 0.4); border: none; cursor: pointer; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(255, 71, 87, 0.5); background: #ff6b81; }
@@ -39,6 +43,10 @@
     </style>
 </head>
 <body>
+
+<div class="notice-bar" data-tr="📢 ÖNEMLİ: BoxTrans'ı Yönetici olarak çalıştırın ve oyununuzu 'Pencere' veya 'Çerçevesiz' moda ayarlayın!">
+    📢 IMPORTANT: Run BoxTrans as Administrator and set your game to 'Windowed' or 'Borderless' mode!
+</div>
 
 <header>
     <h1 style="font-size: 4em; margin: 0;" data-tr="🏆 BoxTrans">🏆 BoxTrans</h1>
@@ -114,9 +122,9 @@
             </div>
             <div class="step">
                 <div class="step-num">2</div>
-                <h4 data-tr="Yönetici Olarak Çalıştır">Run as Admin</h4>
-                <p style="color: #d63031; font-weight: 600;" data-tr="<i class='fa-solid fa-triangle-exclamation'></i> Önemli: Oyun ekranlarını yakalamak için Yönetici olarak çalıştırın.">
-                    <i class="fa-solid fa-triangle-exclamation"></i> Important: Run as Administrator to capture game screens.
+                <h4 data-tr="Yönetici ve Mod Ayarı">Admin & Game Mode</h4>
+                <p style="color: #d63031; font-weight: 700;" data-tr="<i class='fa-solid fa-triangle-exclamation'></i> Yönetici olarak çalıştırın VE oyunu 'Pencere' veya 'Çerçevesiz' moda alın.">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Run as Administrator AND set your game to 'Windowed' or 'Borderless' mode.
                 </p>
             </div>
             <div class="step">
@@ -143,7 +151,6 @@
 </footer>
 
 <script>
-    // Tab switching function
     function openTab(evt, tabName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tab-content");
@@ -154,7 +161,6 @@
         evt.currentTarget.className += " active";
     }
 
-    // Language Switching Logic
     document.addEventListener("DOMContentLoaded", function() {
         const userLang = navigator.language || navigator.userLanguage;
         if (userLang.startsWith("tr")) {
