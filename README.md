@@ -49,7 +49,7 @@
 
 ## 🛠️ Requirements & Setup
 
-1. **Administrator Rights:** Always run `boxtrans.exe` as Administrator to allow screen capture and global hotkeys.
+1. **Administrator Rights:** Always run `boxtrans.exe` as **Administrator** to allow screen capture and global hotkeys.
 2. **Game Settings:** Set your game to **Windowed** or **Borderless Window** mode.
 3. **DeepL API Key:** You need a (Free or Pro) API key from [DeepL Developer Portal](https://www.deepl.com/pro-api).
 4. **Internet:** Required for AI Translation and Text-to-Speech features.
@@ -59,18 +59,20 @@
 
 ---
 
-## 💻 Tech Stack
-- **Language:** Python 3.x
-- **OCR:** PaddleOCR
-- **Translation:** DeepL API
-- **GUI:** CustomTkinter / Tkinter
-- **Voice:** Google TTS
+## 💻 Technical Details
+- **Engine:** Nuitka-compiled high-performance binary.
+- **OCR:** PaddleOCR Framework.
+- **Translation:** DeepL API Integration.
+- **GUI:** CustomTkinter Modern UI.
+- **Voice:** Google TTS.
 
 ---
 
-## 📜 License & Security
-This project is licensed under the **MIT License**.  
-BoxTrans is a standalone desktop utility. We value your privacy; the app only captures the specific area you select for translation.
+## 📜 License & Privacy
+This project is provided as **Freeware**.  
+- **Usage:** Free for personal and non-commercial use.
+- **Protection:** All intellectual property rights belong to **BoxTranslate**. Reverse engineering, decompiling, or commercial redistribution is strictly prohibited.
+- **Privacy:** BoxTrans is a standalone utility. Your privacy is a priority; the app only captures and processes the specific screen area you manually select.
 
 ---
 
@@ -88,4 +90,4 @@ If you encounter bugs or have feature suggestions:
 </p>
 
 ---
-<p align="center">© 2024 BoxTrans Project. All rights reserved.</p>
+<p align="center">© 2024-2025 BoxTrans Project. All rights reserved.</p>
