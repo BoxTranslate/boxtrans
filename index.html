@@ -13,7 +13,6 @@
         :root { --primary: #ff4757; --dark: #1e272e; --light: #f1f2f6; --accent: #2ed573; --github: #24292e; --warning: #ff9f43; }
         body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--dark); overflow-x: hidden; scroll-behavior: smooth; }
         
-        /* Top Warning Bar */
         .notice-bar { background: var(--warning); color: #000; padding: 10px 20px; text-align: center; font-size: 0.9em; font-weight: 700; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         
         header { padding: 80px 20px 180px 20px; background: linear-gradient(135deg, #2f3542 0%, #1e272e 100%); color: white; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); position: relative; z-index: 1; }
@@ -40,6 +39,11 @@
         footer { background: #1e272e; color: white; padding: 80px 20px; text-align: center; margin-top: 100px; }
         .footer-links a { color: #aaa; text-decoration: none; margin: 0 15px; transition: 0.3s; }
         .footer-links a:hover { color: white; }
+        
+        /* Coffee Section Style */
+        .coffee-card { background: white; padding: 40px 20px; text-align: center; border-radius: 20px; margin: 40px auto; border: 1px solid #eee; color: var(--dark); }
+        .coffee-btn { display: inline-flex; align-items: center; background: #FFDD00; color: #000; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; transition: 0.3s; gap: 10px; margin-top: 15px; box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3); }
+        .coffee-btn:hover { transform: scale(1.05); }
     </style>
 </head>
 <body>
@@ -63,6 +67,7 @@
         <button class="tab-btn active" onclick="openTab(event, 'tab1')" data-tr="⚡ OCR Motoru">⚡ OCR Engine</button>
         <button class="tab-btn" onclick="openTab(event, 'tab2')" data-tr="🌎 Global Destek">🌎 Global Support</button>
         <button class="tab-btn" onclick="openTab(event, 'tab3')" data-tr="🔊 Yapay Zeka Ses">🔊 AI Voice</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab4')" data-tr="🎥 Rehber (Yakında)">🎥 Tutorial (Soon)</button>
     </div>
 
     <div id="tab1" class="tab-content active">
@@ -83,20 +88,29 @@
         <img src="Animation3.gif" class="gif-display" alt="TTS Demo">  
     </div>
 
+    <div id="tab4" class="tab-content">
+    <h3 data-tr="Video Rehber Çok Yakında!">Video Guide Coming Soon!</h3>
+    <p data-tr="Tüm hikayeli oyunlar için hazırladığımız detaylı kullanım rehberi çok yakında burada olacaktır.">
+        Detailed usage guides for all story-driven games will be added here very soon.
+    </p>
+    <div style="padding: 60px; border: 2px dashed #ddd; border-radius: 15px; margin-top: 20px;">
+        <i class="fa-solid fa-clapperboard" style="font-size: 3em; color: var(--primary); opacity: 0.5;"></i>
+    </div>
+    </div>
+
     <div class="star-section">
         <a href="https://github.com/BoxTranslate/boxtrans" target="_blank">
             <img src="https://img.shields.io/github/stars/BoxTranslate/boxtrans?style=social" alt="GitHub stars" style="transform: scale(1.5);">
         </a>
         <br>
         <b data-tr="BoxTrans'ı beğendiyseniz, projeyi desteklemek için lütfen GitHub'da bir ⭐ verin!">If you like BoxTrans, please give us a ⭐ on GitHub to support the project!</b>
-        <p style="font-size: 0.9em; color: #777; margin-top: 10px;" data-tr="Desteğiniz yeni özellikler geliştirmemize yardımcı oluyor!">Your support helps us develop new features!</p>
     </div>
 
     <div class="grid">
         <div class="card">
-            <i class="fa-solid fa-bolt"></i>
-            <h3 data-tr="Gerçek Zamanlı Hız">Real-Time Speed</h3>
-            <p data-tr="Performans için optimize edildi. Alan seçiminden hemen sonra sonuçları alın.">Optimized for performance. Get results almost instantly after selection.</p>
+            <i class="fa-solid fa-microchip"></i>
+            <h3 data-tr="Düşük Kaynak Tüketimi">Ultra Lightweight</h3>
+            <p data-tr="FPS düşüşü yaşatmaz. Sadece ~1GB RAM kullanır ve ekran kartınızı yormaz.">No FPS drops. Uses only ~1GB RAM and keeps your GPU usage minimal.</p>
         </div>
         <div class="card">
             <i class="fa-solid fa-earth-asia"></i>
@@ -108,6 +122,15 @@
             <h3 data-tr="Güvenli Araç">Secure Tool</h3>
             <p data-tr="BoxTrans bağımsız bir masaüstü uygulamasıdır. Gizliliğiniz önceliğimizdir.">BoxTrans is a standalone desktop application. Your privacy is our priority.</p>
         </div>
+    </div>
+
+    <div class="coffee-card">
+        <h3 data-tr="☕ BoxTrans'ı Destekleyin">☕ Support BoxTrans</h3>
+        <p data-tr="Bu araç tamamen ücretsizdir. Eğer işinize yaradıysa bir kahve ısmarlayarak geliştirmemize destek olabilirsiniz!">This tool is completely free. If it helped you, consider buying us a coffee to support development!</p>
+        <a href="https://buymeacoffee.com/boxtrans" target="_blank" class="coffee-btn">
+            <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee" style="width: 20px;">
+            <span>Buy Me a Coffee</span>
+        </a>
     </div>
 </div>
 
@@ -138,10 +161,6 @@
 
 <footer>
     <h2 style="margin-bottom: 10px;" data-tr="Çeviriye Hazır mısınız?">Ready to Translate?</h2>
-    <p style="opacity: 0.7; margin-bottom: 30px;" data-tr="Profesyonel ekran çeviri aracını deneyimleyin.">Experience the professional screen translation tool.</p>
-    <a href="https://buymeacoffee.com/boxtrans" target="_blank" style="text-decoration: none;">
-        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" style="height: 50px;">
-    </a>
     <div style="margin-top: 40px;" class="footer-links">
         <a href="https://github.com/BoxTranslate/boxtrans"><i class="fa-brands fa-github"></i> GitHub</a>
         <a href="https://github.com/BoxTranslate/boxtrans/blob/main/README.md" data-tr="<i class='fa-solid fa-book'></i> Dokümantasyon"><i class="fa-solid fa-book"></i> Documentation</a>
@@ -163,6 +182,7 @@
 
     document.addEventListener("DOMContentLoaded", function() {
         const userLang = navigator.language || navigator.userLanguage;
+        // Eğer dil Türkçe ise (tr, tr-TR vb.) data-tr içeriğini bas
         if (userLang.startsWith("tr")) {
             const translatableElements = document.querySelectorAll("[data-tr]");
             translatableElements.forEach(el => {
