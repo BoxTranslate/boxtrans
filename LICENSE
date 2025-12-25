@@ -1,21 +1,24 @@
-MIT License
+BoxTrans License Agreement
 
-Copyright (c) 2024 BoxTrans
+Copyright (c) 2024-2025 BoxTrans Project (BoxTranslate)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. GRANT OF LICENSE
+BoxTrans is provided as "Freeware". You are granted the right to install and use this software for personal, non-commercial purposes at no cost.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+2. RESTRICTIONS
+- You may not decompile, "crack", disassemble, or otherwise reverse engineer the software (Nuitka-compiled binaries).
+- You may not sell, rent, lease, or lend the software to any third party.
+- You may not redistribute the software in any way that suggests it is your own creation.
+- You may not modify or create derivative works based upon the software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+3. OWNERSHIP
+The software and all intellectual property rights remain the exclusive property of BoxTranslate (BoxTrans Project).
+
+4. TERMINATION
+This license is effective until terminated. Your rights under this license will terminate automatically without notice if you fail to comply with any term(s) of this license.
+
+5. DISCLAIMER OF WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. THE AUTHOR SHALL NOT BE LIABLE FOR ANY DAMAGES, DATA LOSS, OR SYSTEM FAILURES ARISING FROM THE USE OF THIS SOFTWARE.
+
+6. CONTACT
+For permissions beyond the scope of this license, please contact: herrmanndolunay@gmail.com
