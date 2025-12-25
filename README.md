@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/github/stars/BoxTranslate/boxtrans?style=for-the-badge&color=yellow" alt="GitHub stars">
   </a>
   <a href="https://github.com/BoxTranslate/boxtrans/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/BoxTranslate/boxtrans?style=for-the-badge&color=blue" alt="License">
+  <img src="https://img.shields.io/github/license/BoxTranslate/boxtrans?style=for-the-badge&color=blue&v=1" alt="License">
   </a>
   <a href="https://github.com/BoxTranslate/boxtrans/releases">
     <img src="https://img.shields.io/github/v/release/BoxTranslate/boxtrans?style=for-the-badge&color=green" alt="Release">
