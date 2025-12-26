@@ -73,7 +73,7 @@ This project is provided as **Freeware**.
 ---
 
 ## 📧 Contact & Support
-Developed with ❤️ by **Thewalkry**.  
+Developed with Python by **Thewalkry**.  
 If you encounter bugs or have feature suggestions:
 
 - **Email:** herrmanndolunay@gmail.com
