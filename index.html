@@ -16,7 +16,6 @@
         .notice-bar { background: var(--warning); color: #000; padding: 10px 20px; text-align: center; font-size: 0.9em; font-weight: 700; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         
         header { padding: 80px 20px 180px 20px; background: linear-gradient(135deg, #2f3542 0%, #1e272e 100%); color: white; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); position: relative; z-index: 1; }
-        header h1, header p, header .btn-group { position: relative; z-index: 5; }
         
         .btn { display: inline-block; padding: 18px 40px; background: var(--primary); color: white; text-decoration: none; border-radius: 50px; font-weight: 800; transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 71, 87, 0.4); border: none; cursor: pointer; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(255, 71, 87, 0.5); background: #ff6b81; }
@@ -46,7 +45,6 @@
         
         .coffee-section { background: #fdfdfd; padding: 80px 20px; text-align: center; border-top: 1px solid #eee; }
         .coffee-btn { display: inline-flex; align-items: center; background: #FFDD00; color: #000; padding: 14px 30px; border-radius: 12px; text-decoration: none; font-weight: bold; transition: 0.3s; gap: 10px; box-shadow: 0 4px 15px rgba(255, 221, 0, 0.3); }
-        .coffee-btn:hover { transform: scale(1.05); }
         
         footer { background: #1e272e; color: white; padding: 80px 20px; text-align: center; }
         .footer-links a { color: #aaa; text-decoration: none; margin: 0 15px; transition: 0.3s; }
@@ -173,10 +171,16 @@
     <h2 style="margin-bottom: 10px;" data-tr="Çeviriye Hazır mısınız?">Ready to Translate?</h2>
     <div class="footer-links">
         <a href="https://github.com/BoxTranslate/boxtrans"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a href="https://github.com/BoxTranslate/boxtrans/blob/main/README.md" data-tr="<i class='fa-solid fa-book'></i> Dokümantasyon"><i class="fa-solid fa-book"></i> Documentation</a>
-        <a href="https://github.com/BoxTranslate/boxtrans/blob/main/README.md#contact" data-tr="<i class='fa-solid fa-envelope'></i> İletişim"><i class="fa-solid fa-envelope"></i> Contact</a>
+        
+        <a href="https://github.com/BoxTranslate/boxtrans/blob/main/README.md" id="doc-link">
+            <i class="fa-solid fa-book"></i> <span data-tr="Dokümantasyon">Documentation</span>
+        </a>
+        
+        <a href="https://github.com/BoxTranslate/boxtrans/blob/main/README.md#contact--support" id="contact-link">
+            <i class="fa-solid fa-envelope"></i> <span data-tr="İletişim">Contact</span>
+        </a>
     </div>
-    <p style="margin-top: 50px; font-size: 0.8em; opacity: 0.4;">&copy; 2024 BoxTrans Project. All Rights Reserved.</p>
+    <p style="margin-top: 50px; font-size: 0.8em; opacity: 0.4;">&copy; 2024-2025 BoxTrans Project. All Rights Reserved.</p>
 </footer>
 
 <script>
@@ -192,11 +196,19 @@
 
     document.addEventListener("DOMContentLoaded", function() {
         const userLang = navigator.language || navigator.userLanguage;
+        const docLink = document.getElementById("doc-link");
+        const contactLink = document.getElementById("contact-link");
+
+        // Dil Kontrolü ve Metin Değişimi
         if (userLang.startsWith("tr")) {
             const translatableElements = document.querySelectorAll("[data-tr]");
             translatableElements.forEach(el => {
                 el.innerHTML = el.getAttribute("data-tr");
             });
+
+            // Türkçe README linkleri
+            if(docLink) docLink.href = "https://github.com/BoxTranslate/boxtrans/blob/main/README_TR.md";
+            if(contactLink) contactLink.href = "https://github.com/BoxTranslate/boxtrans/blob/main/README_TR.md#-i%CC%87leti%C5%9Fim--destek";
         }
     });
 </script>
