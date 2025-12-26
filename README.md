@@ -17,6 +17,7 @@
 </p>
 
 - A powerful, AI-driven real-time screen translation and OCR tool. Seamlessly capture, translate, and listen to any text on your screen.
+
 ---
 
 ## 📺 Preview
