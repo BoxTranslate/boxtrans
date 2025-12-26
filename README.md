@@ -16,12 +16,7 @@
   <b>If you like BoxTrans, please give us a ⭐ on GitHub to support the project!</b>
 </p>
 
----
-
-### 🌍 Language / Dil
-- **English:** A powerful, AI-driven real-time screen translation and OCR tool. Seamlessly capture, translate, and listen to any text on your screen.
-- **Turkish:** Yapay zeka destekli, gerçek zamanlı ekran çeviri ve OCR aracı. Ekrandaki her türlü metni yakalayın, çevirin ve sesli dinleyin.
-
+- A powerful, AI-driven real-time screen translation and OCR tool. Seamlessly capture, translate, and listen to any text on your screen.
 ---
 
 ## 📺 Preview
