@@ -76,6 +76,7 @@ Bu proje **Ücretsiz Yazılım (Freeware)** olarak sunulmaktadır.
 **Thewalkry** tarafından Python ile geliştirildi.
 Hata bildirimleri, geri bildirimler veya özellik önerileri için:
 
+- **Github Sayfası:** https://boxtranslate.github.io/boxtrans/
 - **DonanımHaber Konusu:** [BoxTrans DH Konu Başlığı](https://forum.donanimhaber.com/yerli-proje-oyunlarda-telefonla-ceviri-yapmaya-son-boxtrans-ekran-ustu-anlik-ceviri-araci--162742706)
 - **Reddit:** [u/Thewalkry](https://www.reddit.com/user/Thewalkry/)
 - **E-posta:** herrmanndolunay@gmail.com
