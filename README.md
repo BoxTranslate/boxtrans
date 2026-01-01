@@ -76,6 +76,7 @@ This project is provided as **Freeware**.
 Developed with Python by **Thewalkry**.  
 If you encounter bugs or have feature suggestions:
 
+- **Github Page:** https://boxtranslate.github.io/boxtrans/
 - **Email:** herrmanndolunay@gmail.com
 - **Reddit:** [u/Thewalkry](https://www.reddit.com/user/Thewalkry/)
 
