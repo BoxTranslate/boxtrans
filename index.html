@@ -6,12 +6,11 @@
     <meta name="google-site-verification" content="P2e7Wj6Ht3-WP2yBR4n1PqTIWlXPRGWNNDEIxir8gJI" />
     <title>BoxTrans - 6x Faster AI Screen Translator (v1.4.0 Turbo)</title>
     <meta name="description" content="BoxTrans - Official Site. Free AI-powered real-time screen translator with GPU acceleration. Fast OCR and translation for games and visual novels.">
-    <meta name="keywords" content="BoxTrans, screen translator, game translator, real-time ocr, paddleocr, deepl translator, gpu accelerated translator">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #ff4757; --dark: #1e272e; --light: #f1f2f6; --accent: #2ed573; --github: #24292e; --warning: #ff9f43; --turbo: #2ecc71; }
+        :root { --primary: #ff4757; --dark: #1e272e; --light: #f1f2f6; --accent: #2ed573; --github: #24292e; --warning: #ff9f43; --turbo: #2ecc71; --dh: #ff6000; }
         body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--dark); overflow-x: hidden; scroll-behavior: smooth; }
         
         .notice-bar { background: var(--warning); color: #000; padding: 10px 20px; text-align: center; font-size: 0.9em; font-weight: 700; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
@@ -20,8 +19,10 @@
         
         .badge-turbo { background: var(--turbo); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.4em; vertical-align: middle; margin-left: 10px; text-transform: uppercase; letter-spacing: 1px; }
 
-        .btn { display: inline-block; padding: 18px 40px; background: var(--primary); color: white; text-decoration: none; border-radius: 50px; font-weight: 800; transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 71, 87, 0.4); border: none; cursor: pointer; }
+        .btn { display: inline-block; padding: 18px 40px; background: var(--primary); color: white; text-decoration: none; border-radius: 50px; font-weight: 800; transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 71, 87, 0.4); border: none; cursor: pointer; margin: 10px; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(255, 71, 87, 0.5); background: #ff6b81; }
+        .btn-gh { background: var(--github); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .btn-gh:hover { background: #333; }
         
         .container { max-width: 1000px; margin: -100px auto 50px; padding: 0 20px; position: relative; z-index: 10; }
         
@@ -50,16 +51,18 @@
         .step-num { width: 40px; height: 40px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 800; }
         
         footer { background: #1e272e; color: white; padding: 80px 20px; text-align: center; }
-        .footer-links a { color: #aaa; text-decoration: none; margin: 0 15px; transition: 0.3s; }
+        .footer-links { margin-top: 20px; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
+        .footer-links a { color: #aaa; text-decoration: none; font-size: 1.1em; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
         .footer-links a:hover { color: white; }
+        .footer-links a.dh-link:hover { color: var(--dh); }
         
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
-<div class="notice-bar" data-tr="📢 ÖNEMLİ: BoxTrans v1.4.0 çıktı! Artık GPU desteğiyle 6 kat daha hızlı.">
-    📢 IMPORTANT: BoxTrans v1.4.0 is out! Now 6x faster with GPU acceleration.
+<div class="notice-bar" data-tr="📢 ÖNEMLİ: BoxTrans v1.4.0 çıktı! GPU desteğiyle 6 kat daha hızlı çeviri.">
+    📢 IMPORTANT: BoxTrans v1.4.0 is out! 6x faster translation with GPU acceleration.
 </div>
 
 <header>
@@ -69,6 +72,9 @@
         <a href="https://github.com/BoxTranslate/boxtrans/releases/" class="btn" data-tr="<i class='fa-brands fa-windows'></i> v1.4.0 Ücretsiz İndir">
             <i class="fa-brands fa-windows"></i> Download v1.4.0 Free
         </a>
+        <a href="https://github.com/BoxTranslate/boxtrans" class="btn btn-gh" data-tr="<i class='fa-brands fa-github'></i> Kaynak Kodu">
+            <i class="fa-brands fa-github"></i> GitHub Source
+        </a>
     </div>
 </header>
 
@@ -77,37 +83,33 @@
         <button class="tab-btn active" onclick="openTab(event, 'tab1')" data-tr="🏎️ GPU Hızlandırma">🏎️ GPU Turbo</button>
         <button class="tab-btn" onclick="openTab(event, 'tab2')" data-tr="🌎 Global Destek">🌎 Global Support</button>
         <button class="tab-btn" onclick="openTab(event, 'tab3')" data-tr="🔊 Yapay Zeka Ses">🔊 AI Voice</button>
-        <button class="tab-btn" onclick="openTab(event, 'tab4')" data-tr="🎥 Tanıtım Videosu">🎥 Video</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab4')" data-tr="🎥 Video Rehber">🎥 Video Guide</button>
     </div>
 
     <div id="tab1" class="tab-content active">
-        <h3 data-tr="6 Kat Daha Hızlı (v1.4.0)">6x Faster Performance (v1.4.0)</h3>
+        <h3 data-tr="6 Kat Daha Hızlı Performans">6x Faster Performance</h3>
         <p data-tr="NVIDIA CUDA desteği ile OCR işlemleri artık sadece 0.2 saniye sürüyor.">With NVIDIA CUDA support, OCR processing now takes only 0.2 seconds.</p>
         <img src="Animation.gif" class="gif-display" alt="BoxTrans Turbo Mode"> 
     </div>
 
     <div id="tab2" class="tab-content">
-        <h3 data-tr="Her Yerde Her Şeyi Çevirin">Translate Anything Anywhere</h3>
-        <p data-tr="Dünya çapında 80'den fazla dili destekler. Japonca, Çince ve Korece için optimize edilmiştir.">
-            Supports over 80+ languages globally. Optimized for Japanese, Chinese, and Korean vertical text.
+        <h3 data-tr="Global Dil Desteği">Global Language Support</h3>
+        <p data-tr="80'den fazla dil desteği. Japonca ve Çince dikey metinler için optimize edildi.">
+            Supports 80+ languages. Optimized for Japanese and Chinese vertical text.
         </p>
         <img src="Animation2.gif" class="gif-display" alt="Language Support"> 
     </div>
 
     <div id="tab3" class="tab-content">
         <h3 data-tr="Entegre Ses Sistemi">Integrated Audio Suite</h3>
-        <p data-tr="v1.4 ile FFmpeg entegre edildi. Artık gTTS sesleri kurulum gerektirmeden çalışıyor.">FFmpeg integrated in v1.4. gTTS voices now work out-of-the-box with zero setup.</p>
+        <p data-tr="FFmpeg entegrasyonu ile gTTS sesleri kurulumsuz çalışır.">FFmpeg integrated. gTTS voices work out-of-the-box.</p>
         <img src="Animation3.gif" class="gif-display" alt="TTS Demo">  
     </div>
 
     <div id="tab4" class="tab-content">
-        <h3 data-tr="Performans Testi">Performance Showcase</h3>
+        <h3 data-tr="BoxTrans Nasıl Kullanılır?">How to Use?</h3>
         <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/6RWPgjZuaWQ" 
-                title="BoxTrans Showcase"
-                allowfullscreen>
-            </iframe>
+            <iframe src="https://www.youtube.com/embed/6RWPgjZuaWQ" title="BoxTrans Showcase" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -120,39 +122,30 @@
     </div>
 
     <div class="grid">
-        <div class="card">
-            <i class="fa-solid fa-bolt"></i>
-            <h3 data-tr="Turbo Hız">Turbo Speed</h3>
-            <p data-tr="GPU desteği ile gecikmesiz, anlık çeviri deneyimi.">Instant translation experience with GPU-accelerated zero-lag.</p>
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-box-open"></i>
-            <h3 data-tr="Hepsi Bir Arada">All-in-One</h3>
-            <p data-tr="Gerekli tüm kütüphaneler (CUDA, FFmpeg) pakete dahildir.">All necessary libraries (CUDA, FFmpeg) are included in the package.</p>
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-shield-halved"></i>
-            <h3 data-tr="Güvenli ve Yerli">Secure & Standalone</h3>
-            <p data-tr="Verileriniz güvende, sadece seçtiğiniz metinler DeepL ile işlenir.">Your data is safe, only selected text is processed via DeepL SSL.</p>
-        </div>
+        <div class="card"><i class="fa-solid fa-bolt"></i><h3 data-tr="Turbo Hız">Turbo Speed</h3><p data-tr="GPU desteği ile gecikmesiz çeviri.">Zero-lag with GPU support.</p></div>
+        <div class="card"><i class="fa-solid fa-box-open"></i><h3 data-tr="Hepsi Bir Arada">All-in-One</h3><p data-tr="Gerekli tüm kütüphaneler dahildir.">All necessary libraries included.</p></div>
+        <div class="card"><i class="fa-solid fa-shield-halved"></i><h3 data-tr="Güvenli">Secure</h3><p data-tr="Gizliliğiniz önceliğimizdir.">Privacy is our priority.</p></div>
     </div>
 </div>
 
 <section class="how-it-works">
-    <h2 data-tr="BoxTrans Nasıl Kullanılır?">How to Use BoxTrans?</h2>
+    <h2 data-tr="Kullanım Adımları">How it Works?</h2>
     <div class="steps">
-        <div class="step"><div class="step-num">1</div><h4 data-tr="İndir">Download</h4><p data-tr="En son Setup.exe'yi indirin.">Get the latest Setup.exe.</p></div>
-        <div class="step"><div class="step-num">2</div><h4 data-tr="Yönetici">Admin Mode</h4><p data-tr="YÖNETİCİ olarak çalıştırın.">Run as ADMIN always.</p></div>
-        <div class="step"><div class="step-num">3</div><h4 data-tr="Çevir">Translate</h4><p data-tr="Alan seçin ve çevirin!">Select area and translate!</p></div>
+        <div class="step"><div class="step-num">1</div><h4 data-tr="İndir">Download</h4><p data-tr="Setup.exe'yi indirin.">Get Setup.exe.</p></div>
+        <div class="step"><div class="step-num">2</div><h4 data-tr="Yönetici">Admin</h4><p data-tr="Yönetici olarak çalıştırın.">Run as ADMIN.</p></div>
+        <div class="step"><div class="step-num">3</div><h4 data-tr="Çevir">Translate</h4><p data-tr="Alanı seçin ve çevirin!">Select and translate!</p></div>
     </div>
 </section>
 
 <footer>
+    <h2 data-tr="Bağlantılar">Quick Links</h2>
     <div class="footer-links">
         <a href="https://github.com/BoxTranslate/boxtrans"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a href="https://forum.donanimhaber.com/yerli-proje-oyunlarda-telefonla-ceviri-yapmaya-son-boxtrans-ekran-ustu-anlik-ceviri-araci--162742706"><i class="fa-solid fa-comments"></i> DonanımHaber</a>
+        <a href="https://github.com/BoxTranslate/boxtrans/blob/main/README.md" id="doc-link"><i class="fa-solid fa-book"></i> <span data-tr="Dokümantasyon">Documentation</span></a>
+        <a href="https://forum.donanimhaber.com/yerli-proje-oyunlarda-telefonla-ceviri-yapmaya-son-boxtrans-ekran-ustu-anlik-ceviri-araci--162742706" class="dh-link"><i class="fa-solid fa-comments"></i> DonanımHaber</a>
+        <a href="https://github.com/BoxTranslate/boxtrans/blob/main/README.md#contact--support" id="contact-link"><i class="fa-solid fa-envelope"></i> <span data-tr="İletişim">Contact</span></a>
     </div>
-    <p style="margin-top: 30px; font-size: 0.8em; opacity: 0.4;">&copy; 2024-2026 BoxTrans Project.</p>
+    <p style="margin-top: 40px; font-size: 0.8em; opacity: 0.4;">&copy; 2024-2026 BoxTrans Project. All Rights Reserved.</p>
 </footer>
 
 <script>
@@ -168,9 +161,16 @@
 
     document.addEventListener("DOMContentLoaded", function() {
         const userLang = navigator.language || navigator.userLanguage;
+        const docLink = document.getElementById("doc-link");
+        const contactLink = document.getElementById("contact-link");
+
         if (userLang.startsWith("tr")) {
             const translatableElements = document.querySelectorAll("[data-tr]");
             translatableElements.forEach(el => { el.innerHTML = el.getAttribute("data-tr"); });
+            
+            // Türkçe dökümantasyon yönlendirmesi
+            if(docLink) docLink.href = "https://github.com/BoxTranslate/boxtrans/blob/main/README_tr.md";
+            if(contactLink) contactLink.href = "https://github.com/BoxTranslate/boxtrans/blob/main/README_tr.md#ileti%C5%9Fim--destek";
         }
     });
 </script>
