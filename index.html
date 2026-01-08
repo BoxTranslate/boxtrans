@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="P2e7Wj6Ht3-WP2yBR4n1PqTIWlXPRGWNNDEIxir8gJI" />
-    <title>BoxTrans - 6x Faster AI Screen Translator (v1.4.0 Turbo)</title>
-    <meta name="description" content="BoxTrans - Official Site. Free AI-powered real-time screen translator with GPU acceleration. Fast OCR and translation for games and visual novels.">
+    <title>BoxTrans - 6x Faster AI Screen Translator (v1.5.0 Pro)</title>
+    <meta name="description" content="BoxTrans - Official Site. Free AI-powered real-time screen translator with GPU acceleration and Transparent HUD. Fast OCR and translation for games.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #ff4757; --dark: #1e272e; --light: #f1f2f6; --accent: #2ed573; --github: #24292e; --warning: #ff9f43; --turbo: #2ecc71; }
+        :root { --primary: #ff4757; --dark: #1e272e; --light: #f1f2f6; --accent: #2ed573; --github: #24292e; --warning: #ff9f43; --turbo: #2ecc71; --indigo: #5f27cd; }
         body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--dark); overflow-x: hidden; scroll-behavior: smooth; }
         
         .notice-bar { background: var(--warning); color: #000; padding: 10px 20px; text-align: center; font-size: 0.9em; font-weight: 700; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
@@ -19,7 +19,6 @@
         
         .badge-turbo { background: var(--turbo); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.4em; vertical-align: middle; margin-left: 10px; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Buton Grubu Ortalama */
         .btn-group { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
 
         .btn { display: inline-block; padding: 18px 40px; background: var(--primary); color: white; text-decoration: none; border-radius: 50px; font-weight: 800; transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 71, 87, 0.4); border: none; cursor: pointer; }
@@ -41,7 +40,6 @@
 
         .star-section { text-align: center; background: white; padding: 40px; border-radius: 20px; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 2px dashed #ddd; }
         
-        /* 3'lü Kart Hizalama Düzeltmesi */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; align-items: stretch; }
         .card { background: white; padding: 30px; border-radius: 20px; border-bottom: 4px solid var(--primary); transition: 0.3s; height: 100%; box-sizing: border-box; text-align: center; display: flex; flex-direction: column; justify-content: center; }
         .card:hover { transform: translateY(-10px); }
@@ -62,44 +60,44 @@
 </head>
 <body>
 
-<div class="notice-bar" data-tr="📢 ÖNEMLİ: BoxTrans v1.4.0 Turbo çıktı! GPU ile 6 kat daha hızlı çeviri.">
-    📢 IMPORTANT: BoxTrans v1.4.0 Turbo is out! 6x faster with GPU acceleration.
+<div class="notice-bar" data-tr="📢 ÖNEMLİ: BoxTrans v1.5 çıktı! Şeffaf HUD ve DPI Desteği ile kesintisiz oyun keyfi.">
+    📢 IMPORTANT: BoxTrans v1.5 is out! Seamless gaming with Transparent HUD and DPI Support.
 </div>
 
 <header>
-    <h1 style="font-size: 4em; margin: 0;" data-tr="🏆 BoxTrans <span class='badge-turbo'>TURBO</span>">🏆 BoxTrans <span class="badge-turbo">TURBO</span></h1>
-    <p style="font-size: 1.2em; opacity: 0.8; margin: 20px 0 40px;" data-tr="Profesyonel Yapay Zeka Destekli Gerçek Zamanlı Ekran Çevirisi">Professional AI-Powered Real-Time Screen Translation</p>
+    <h1 style="font-size: 4em; margin: 0;" data-tr="🏆 BoxTrans <span class='badge-turbo'>v1.5 PRO</span>">🏆 BoxTrans <span class="badge-turbo">v1.5 PRO</span></h1>
+    <p style="font-size: 1.2em; opacity: 0.8; margin: 20px 0 40px;" data-tr="Görünmez HUD ve GPU Hızlandırmalı Gerçek Zamanlı Çeviri">Invisible HUD and GPU-Accelerated Real-Time Translation</p>
     <div class="btn-group">
-        <a href="https://github.com/BoxTranslate/boxtrans/releases/" class="btn" data-tr="<i class='fa-brands fa-windows'></i> v1.4.0 Ücretsiz İndir">
-            <i class="fa-brands fa-windows"></i> Download v1.4.0 Free
+        <a href="https://github.com/BoxTranslate/boxtrans/releases/" class="btn" data-tr="<i class='fa-brands fa-windows'></i> v1.5.0 Ücretsiz İndir">
+            <i class="fa-brands fa-windows"></i> Download v1.5.0 Free
         </a>
     </div>
 </header>
 
 <div class="container">
     <div class="tabs">
-        <button class="tab-btn active" onclick="openTab(event, 'tab1')" data-tr="🏎️ GPU Hızlandırma">🏎️ GPU Turbo</button>
-        <button class="tab-btn" onclick="openTab(event, 'tab2')" data-tr="🌎 Global Destek">🌎 Global Support</button>
-        <button class="tab-btn" onclick="openTab(event, 'tab3')" data-tr="🔊 Yapay Zeka Ses">🔊 AI Voice</button>
+        <button class="tab-btn active" onclick="openTab(event, 'tab1')" data-tr="🏎️ GPU & CPU">🏎️ Performance</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab2')" data-tr="👻 Görünmez HUD">👻 Invisible HUD</button>
+        <button class="tab-btn" onclick="openTab(event, 'tab3')" data-tr="🎯 DPI Desteği">🎯 DPI Support</button>
         <button class="tab-btn" onclick="openTab(event, 'tab4')" data-tr="🎥 Video Rehber">🎥 Video Guide</button>
     </div>
 
     <div id="tab1" class="tab-content active">
-        <h3 data-tr="Turbo Performans (v1.4.0)">Turbo Performance (v1.4.0)</h3>
-        <p data-tr="NVIDIA CUDA ile OCR artık 6 kat daha hızlı (~0.2s).">With NVIDIA CUDA, OCR is now 6x faster (~0.2s).</p>
+        <h3 data-tr="Hibrit Performans (v1.5.0)">Hybrid Performance (v1.5.0)</h3>
+        <p data-tr="NVIDIA CUDA ile 6 kat daha hızlı (~0.2s) veya optimize CPU moduyla takılmasız deneyim.">6x faster with NVIDIA CUDA (~0.2s) or stutter-free experience with optimized CPU mode.</p>
         <img src="Animation.gif" class="gif-display" alt="BoxTrans Turbo Mode"> 
     </div>
 
     <div id="tab2" class="tab-content">
-        <h3 data-tr="Global Dil Desteği">Global Language Support</h3>
-        <p data-tr="80'den fazla dil desteği. Japonca ve Çince dikey metinler için optimize edildi.">Supports 80+ languages. Optimized for Asian vertical text.</p>
-        <img src="Animation2.gif" class="gif-display" alt="Language Support"> 
+        <h3 data-tr="Oyun Odaklı Şeffaf HUD">Game-Oriented Transparent HUD</h3>
+        <p data-tr="Yeni şeffaflık ayarları sayesinde çeviri kutuları oyun zevkinizi bozmaz, görüşü kapatmaz.">New transparency settings ensure translation boxes don't block your view or gameplay.</p>
+        <img src="Animation2.gif" class="gif-display" alt="Transparent HUD Support"> 
     </div>
 
     <div id="tab3" class="tab-content">
-        <h3 data-tr="Entegre Ses Sistemi">Integrated Audio Suite</h3>
-        <p data-tr="FFmpeg entegrasyonu ile sesler kurulumsuz çalışır.">FFmpeg integrated. gTTS voices work out-of-the-box.</p>
-        <img src="Animation3.gif" class="gif-display" alt="TTS Demo">  
+        <h3 data-tr="Gelişmiş DPI Farkındalığı">Advanced DPI Awareness</h3>
+        <p data-tr="Windows ölçeklendirme ayarınız (%125, %150) ne olursa olsun her zaman tam isabet alan seçimi.">Pixel-perfect area selection regardless of Windows scaling settings (125%, 150%).</p>
+        <img src="Animation3.gif" class="gif-display" alt="DPI Support Demo">  
     </div>
 
     <div id="tab4" class="tab-content">
@@ -118,19 +116,19 @@
         
         <div class="grid">
             <div class="card">
-                <i class="fa-solid fa-bolt"></i>
-                <h3 data-tr="Turbo Hız">Turbo Speed</h3>
-                <p data-tr="GPU desteği ile gecikmesiz, anlık çeviri deneyimi.">Instant translation experience with GPU-accelerated zero-lag.</p>
+                <i class="fa-solid fa-gauge-high"></i>
+                <h3 data-tr="Sıfır Gecikme">Zero Lag</h3>
+                <p data-tr="Yeni CPU optimizasyonu sayesinde eski sistemlerde bile oyunu dondurmaz.">New CPU optimization ensures no game freezing, even on legacy systems.</p>
             </div>
             <div class="card">
-                <i class="fa-solid fa-box-open"></i>
-                <h3 data-tr="Hepsi Bir Arada">All-in-One</h3>
-                <p data-tr="Gerekli tüm kütüphaneler (CUDA, FFmpeg) pakete dahildir.">All necessary libraries (CUDA, FFmpeg) are included in the package.</p>
+                <i class="fa-solid fa-eye-slash"></i>
+                <h3 data-tr="Dikkat Dağıtmaz">Non-Intrusive</h3>
+                <p data-tr="Tamamen şeffaf ve modern overlay tasarımı ile oyun ekranına uyum sağlar.">Fits your game screen with a fully transparent and modern overlay design.</p>
             </div>
             <div class="card">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h3 data-tr="Güvenli ve Bağımsız">Secure & Standalone</h3>
-                <p data-tr="Verileriniz güvende, sadece seçtiğiniz metinler SSL ile işlenir.">Your data is safe, only selected text is processed via SSL.</p>
+                <i class="fa-solid fa-bullseye"></i>
+                <h3 data-tr="Tam İsabet">High Precision</h3>
+                <p data-tr="4K monitörlerde ve yüksek DPI ayarlarında hatasız koordinat algılama.">Error-free coordinate detection on 4K monitors and high DPI settings.</p>
             </div>
         </div>
     </div>
@@ -149,7 +147,7 @@
     <div class="footer-links">
         <a href="https://github.com/BoxTranslate/boxtrans"><i class="fa-brands fa-github"></i> GitHub</a>
         <a href="https://github.com/BoxTranslate/boxtrans/blob/main/README.md" id="doc-link"><i class="fa-solid fa-book"></i> <span data-tr="Dokümantasyon">Documentation</span></a>
-        <a href="https://forum.donanimhaber.com/yerli-proje-oyunlarda-telefonla-ceviri-yapmaya-son-boxtrans-ekran-ustu-anlik-ceviri-araci--162742706"><i class="fa-solid fa-comments"></i> DonanımHaber</a>
+        <a href="https://forum.donanimhaber.com/yerli-proje-boxtrans-v1-4-0-turbo-oyunlari-ve-gorsel-romanlari-anlik-cevirin-gpu-destekli--162802906"><i class="fa-solid fa-comments"></i> DonanımHaber</a>
         <a href="https://github.com/BoxTranslate/boxtrans/blob/main/README.md#contact--support" id="contact-link"><i class="fa-solid fa-envelope"></i> <span data-tr="İletişim">Contact</span></a>
     </div>
     <p style="margin-top: 40px; font-size: 0.8em; opacity: 0.4;">&copy; 2024-2026 BoxTrans Project. All Rights Reserved.</p>
