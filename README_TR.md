@@ -5,7 +5,10 @@
     <img src="https://img.shields.io/github/stars/BoxTranslate/boxtrans?style=for-the-badge&color=yellow" alt="GitHub stars">
   </a>
   <a href="https://github.com/BoxTranslate/boxtrans/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/Lisans-Freeware-blue?style=for-the-badge" alt="License">
+    <img src="https://img.shields.io/badge/License-Freeware-blue?style=for-the-badge" alt="License">
+  </a>
+  <a href="https://developer.nvidia.com/cuda-zone">
+    <img src="https://img.shields.io/badge/GPU_Acceleration-NVIDIA_CUDA-green?style=for-the-badge&logo=nvidia" alt="NVIDIA CUDA">
   </a>
   <a href="https://github.com/BoxTranslate/boxtrans/releases">
     <img src="https://img.shields.io/github/v/release/BoxTranslate/boxtrans?style=for-the-badge&color=green" alt="Release">
