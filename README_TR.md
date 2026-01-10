@@ -72,7 +72,7 @@
 
 ## 🛡️ Dosya Bütünlüğü (Checksum)
 İndirdiğiniz dosyanın güvenliğini doğrulamak için SHA256 özet değerini kontrol edebilirsiniz:  
-`sha256:4c6ce86500f8a1c19e6acfd359796088294e661c4686668ef7a51bb9aeb3f4a2`
+`sha256:fcf65d9a09b8f482fcb30d7d34b2b967cf27b8b0d6f5c73be863407fa7b6c0e1`
 
 ---
 
