@@ -72,7 +72,7 @@
 
 ## 🛡️ File Integrity (Checksum)
 To ensure the security of your download, you can verify the file using the SHA256 hash:  
-`sha256:fcf65d9a09b8f482fcb30d7d34b2b967cf27b8b0d6f5c73be863407fa7b6c0e1`
+`sha256:e68709804ffd993a938501d1c2801a08860f830124b4b9011a4c458294c55b22`
 
 ---
 
